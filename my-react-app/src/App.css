@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.inputWrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.todosWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.input {
+  width: 200px;
+  height: 50px;
+  color: black;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  background-color: gray;
+  color: aliceblue;
+}
+
+.text {
+  font-size: 15px;
+  color: black;
+}
