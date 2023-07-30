@@ -1,0 +1,27 @@
+.form {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+}
+
+.inputWrapper {
+	display: flex;
+	gap: 20px;
+}
+
+.add {
+	width: 70px !important;
+	height: 32px !important;
+}
+
+.error {
+	color: #f53e4e;
+	font-weight: 400;
+	font-size: 14px;
+	display: block;
+	margin-top: 5px;
+	min-height: 17px;
+	margin-bottom: 10px;
+	text-align: start;
+}

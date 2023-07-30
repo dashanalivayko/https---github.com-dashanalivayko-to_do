@@ -1,0 +1,43 @@
+.todoWrapper {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: start;
+	width: 315px;
+	justify-content: space-between;
+}
+
+.text {
+	font-size: 19px;
+	color: black;
+	cursor: pointer;
+	margin: 1px 0px 5px;
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.checkbox {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	flex-shrink: 0;
+}
+
+.checkbox:checked+p {
+	text-decoration: line-through;
+}
+
+.edit:disabled {
+	background-color: grey;
+}
+
+.edit {
+	margin-left: auto;
+}
+
+.editWrapper {
+	justify-content: start;
+	display: flex;
+}

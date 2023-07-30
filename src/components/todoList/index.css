@@ -1,0 +1,36 @@
+.column-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+  margin: 30px;
+  width: fit-content;
+}
+
+.todosWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px 0px;
+}
+
+.btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: cornsilk;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.input {
+  width: 200px;
+  height: 30px;
+  color: black;
+  border-radius: 5px;
+  padding: 0px 10px;
+  margin: 0px;
+  font-size: 19px;
+}
