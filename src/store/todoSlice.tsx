@@ -15,7 +15,7 @@ export interface TodoState {
 }
 
 const initialState: TodoState = {
-	todos: [],
+	todos: getFromLocalStorage(),
 	count: getFromLocalStorage().length,
 }
 
@@ -26,13 +26,13 @@ export const todoSlice = createSlice({
 		addTodo: (state, action: PayloadAction<ITodo>) => {
 
 			const todo = {
-				id: state.count,
+				id: Number((Math.random() * 100).toFixed(2)),
 				text: action.payload.text,
 				complete: false,
 			}
 
 			state.todos.unshift(todo);
-			state.count += state.count;
+			state.count = state.count + 1;
 			setToLocalStorage(state.todos);
 		},
 		editTodo: (state, action: PayloadAction<ITodo>) => {
@@ -40,7 +40,7 @@ export const todoSlice = createSlice({
 			setToLocalStorage(state.todos);
 		},
 		deleteTodo: (state, action: PayloadAction<ITodo>) => {
-			state.todos.filter((todo) => action.payload.id !== todo.id);
+			state.todos = state.todos.filter((todo) => action.payload.id !== todo.id);
 			setToLocalStorage(state.todos);
 		},
 		toggleTodo: (state, action: PayloadAction<ITodo>) => {

@@ -48,12 +48,15 @@ const Diagram = memo(() => {
 	}, [completedTasksCount, todos.length])
 
 	return (
-		<div className='chart-wrapper'>
-			<canvas id="canvas" width="200" height="200"></canvas>
-			<div className='number'>total: {todos.length}</div>
-			<p style={{ left: '30px' }}>{todos.length - completedTasksCount}</p>
-			<p style={{ right: '30px' }}>{completedTasksCount}</p>
-		</div>
+		<>
+			{todos.length > 0 &&
+				<div className='chart-wrapper'>
+					<canvas id="canvas" width="200" height="200"></canvas>
+					<div className='number'>total: {todos.length}</div>
+					<p style={{ left: '30px' }}>{todos.length - completedTasksCount}</p>
+					<p style={{ right: '30px' }}>{completedTasksCount}</p>
+				</div>}
+		</>
 	);
 });
 

@@ -19,5 +19,9 @@ export const setToLocalStorage = (todos: ITodo[]) => {
 }
 
 export const getFromLocalStorage = () => {
-	return JSON.parse(localStorage.getItem('todos') || '');
+	const stringifyTodos = localStorage.getItem('todos')!;
+	if (stringifyTodos) {
+		return JSON.parse(stringifyTodos);
+	}
+	return [];
 }
