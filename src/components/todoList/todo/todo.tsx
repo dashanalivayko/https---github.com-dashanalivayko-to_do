@@ -13,7 +13,7 @@ const Todo = memo(({ id, text, complete }: IProps) => {
 	const [isEdit, setIsEdit] = useState(false);
 	const [edibleText, setEdibleText] = useState('');
 	const isDisableEdit = useAppSelector(selectIsDisableEdit);
-	// const [isSubtaskAdd, setIsSubtaskAdd] = useState(false);
+	// const [isSubtaskAdd, setIsSubtaskAdd] = useState(false); // TODO
 
 	const onEditClick = () => {
 		setIsEdit(true);
